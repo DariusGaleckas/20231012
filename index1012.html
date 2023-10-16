@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NamuDarbai20231012</title>
+  </head>
+  <body>
+    <script>
+      document.write(`<h1>Dar gražesnis dangus</h1>`);
+
+      function rand(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+
+      //pirma užduotis
+      document.write(`<h2>Pirma užduotis</h2>`);
+
+      let i = 1;
+      let rez1 = "";
+
+      while (i <= 400) {
+        rez1 += `*`;
+        if (i % 50 === 0) rez1 += `<br />`;
+        i++;
+      }
+      document.write(rez1);
+
+      //Pirma-Pirma užduotis
+      document.write("<h2>Pirma-Pirma užduotis</h2>");
+
+      let sk = rand(1, 6);
+      document.write(sk);
+
+      document.write(`<h${sk}>${sk}</h${sk}>`);
+
+      //Antra užduotis
+      document.write("<h2>Antra užduotis</h2>");
+
+      i = 0;
+      rez1 = "";
+
+      while (i < 30) {
+        let sk1 = rand(-10, 10);
+
+        if (sk1 < 0) rez1 += `<span style="color: green">${sk1}</span>`;
+
+        if (sk1 === 0) rez1 += `<span style="color: red">${sk1}</span>`;
+
+        if (sk1 > 0) rez1 += `<span style="color: blue">${sk1}</span>`;
+
+        i++;
+      }
+      document.write(rez1);
+
+      //Trečia užduotis
+      document.write("<h2>Trečia užduotis</h2>");
+
+      let zodziai = `An American in Paris`;
+      rez1 = zodziai.replaceAll(/[aeioyu]/gi, ``);
+
+      document.write(rez1);
+
+      //Trečia-1 užduotis
+      document.write("<h2>Trečia-1 užduotis</h2>");
+
+      let stringas = `Breakfast at Tiffany's`;
+      rez1 = stringas.replaceAll(/[aeioyu]/gi, ``);
+
+      document.write(rez1);
+
+      //Trečia-2 užduotis
+      document.write("<h2>Trečia-2 užduotis</h2>");
+
+      let stringas1 = `2001: A Space Odyssey`;
+      rez1 = stringas1.replaceAll(/[aeioyu]/gi, ``);
+
+      document.write(rez1);
+
+      //Trečia-3 užduotis
+      document.write("<h2>Trečia-3 užduotis</h2>");
+
+      let stringas2 = `It's a Wonderful Life`;
+      rez1 = stringas2.replaceAll(/[aeioyu]/gi, ``);
+
+      document.write(rez1);
+
+      //Ketvirta užduotis
+      document.write("<h2>Ketvirta užduotis</h2>");
+      let rez = ``;
+      i = 0;
+      let calc = 0;
+
+      while (i < 300) {
+        let skaicius = rand(0, 300);
+
+        if (skaicius > 275)
+          rez += `<span style="color: red;">${skaicius}</span> `;
+        else rez += skaicius + ``;
+
+        if (skaicius > 150) calc++;
+        i++;
+      }
+
+      document.write(rez);
+      document.write(`Skaičių didesnių nei 150 yra:`, calc);
+
+      //Penkta užduotis
+      document.write("<h2>Penkta užduotis</h2>");
+
+      i = 1;
+      rez = ``;
+      let kablelis = `, `;
+      let duomenys = 10000;
+      let daliklis = 77;
+
+      while (i <= duomenys) {
+        if (i === duomenys - (duomenys % daliklis)) kablelis = ``;
+
+        if (i % daliklis === 0) rez += i + kablelis;
+        i++;
+      }
+
+      document.write(rez);
+    </script>
+  </body>
+</html>
